@@ -5,7 +5,7 @@ const App = () => {
   const backgroundStyle = {
     backgroundImage: `url(${profilepic})`,
     backgroundRepeat: 'repeat',
-    backgroundSize: 'contain', // Ensures the full image is visible in each tile
+    backgroundSize: 'contain',
     backgroundPosition: 'top left',
     width: '100vw',
     height: '100vh',
@@ -13,9 +13,7 @@ const App = () => {
   };
 
   return (
-    <main style={backgroundStyle}>
-      <a href='https://frnkastro.bandcamp.com'></a>
-    </main>
+    <main style={backgroundStyle}/>
   );
 };
 
