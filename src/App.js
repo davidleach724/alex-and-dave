@@ -4,7 +4,7 @@ import profilepic from './profilepic.jpeg';
 const App = () => {
   const backgroundStyle = {
     backgroundImage: `url(${profilepic})`,
-    backgroundRepeat: 'repeat',
+    // backgroundRepeat: 'repeat',
     backgroundSize: 'contain',
     backgroundPosition: 'top left',
     width: '100vw',
