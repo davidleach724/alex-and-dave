@@ -12,12 +12,7 @@ const App = () => {
     position: "absolute",
   };
 
-  return (
-    <>
-      <main style={backgroundStyle} />
-      {console.log("test")}
-    </>
-  );
+  return <main style={backgroundStyle} />;
 };
 
 export default App;
