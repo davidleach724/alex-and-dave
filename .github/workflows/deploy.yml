@@ -28,3 +28,5 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           branch: gh-pages
           folder: build
+          clean: true
+          clean-exclude: CNAME
