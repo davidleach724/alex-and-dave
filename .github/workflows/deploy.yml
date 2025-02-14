@@ -3,10 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main
-
-permissions:
-  contents: write
+      - main  # This triggers the workflow when changes are pushed to `main`
 
 jobs:
   build-and-deploy:
@@ -20,13 +17,13 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
+        run: npm run build  # This generates the `build/` directory
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GH_PAT }}
-          branch: gh-pages
-          folder: build
-          clean: true
-          clean-exclude: CNAME
+          token: ${{ secrets.GH_TOKEN }}
+          branch: gh-pages  # Deploy to `gh-pages` branch
+          folder: build     # Push the `build/` directory
+          clean: true        # Clean up old files before deployment
+          clean-exclude: CNAME  # Preserve the `CNAME` file (if using custom domain)
