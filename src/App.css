@@ -13,7 +13,7 @@ body {
 /* Navbar */
 .navbar {
   position: fixed;
-  top: -100px; /* Start hidden */
+  top: -100px;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
@@ -53,7 +53,6 @@ body {
   opacity: 1;
 }
 
-/* Desktop Navbar Layout */
 @media screen and (min-width: 769px) {
   .navbar ul {
     position: static;
@@ -90,33 +89,57 @@ body {
   }
 }
 
-/* Hero Section */
-.hero {
+/* Parallax Effect */
+.parallax-section {
   position: relative;
   height: 100vh;
-  background: url('profile pic.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
-.overlay {
+.parallax-section::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
 }
 
-.overlay h1 {
+.parallax-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+#home {
+  background-image: url('profile pic.jpeg');
+}
+
+#event-details-section {
+  background-image: url('image2.jpeg');
+}
+
+#weekend-section {
+  background-image: url('image3.jpeg');
+}
+
+#registry-section {
+  background-image: url('image4.jpeg');
+}
+
+#rsvp-section {
+  background-image: url('image5.jpeg');
+}
+
+/* Hero Section Fonts */
+#home h1 {
   font-family: 'Tangerine', cursive;
   font-size: 4rem;
   font-weight: 700;
@@ -126,7 +149,7 @@ body {
 /* Countdown Timer */
 .countdown {
   font-family: 'Special Elite', cursive;
-  font-size: 1rem;
+  font-size: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin-top: 10px;
 }
