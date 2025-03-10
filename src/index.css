@@ -4,18 +4,23 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-  overflow-x: hidden; /* Prevents horizontal scroll but allows vertical */
-  overflow-y: auto;   /* Enables vertical scrolling */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* Ensures no horizontal scrolling */
+  scroll-behavior: smooth;
 }
 
+body {
+  background-color: black;
+  overflow-y: auto; /* Ensures vertical scrolling */
+}
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height to min-height */
 }
 
 .profile-pic {
