@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Special+Elite&display=swap");
 
 /* General Styles */
 body {
@@ -119,28 +119,28 @@ body {
 }
 
 #home {
-  background-image: url('profile pic.jpeg');
+  background-image: url("profile pic.jpeg");
 }
 
 #event-details-section {
-  background-image: url('image2.jpeg');
+  background-image: url("image2.jpeg");
 }
 
 #weekend-section {
-  background-image: url('image3.jpeg');
+  background-image: url("image3.jpeg");
 }
 
 #registry-section {
-  background-image: url('image4.jpeg');
+  background-image: url("image4.jpeg");
 }
 
 #rsvp-section {
-  background-image: url('image5.jpeg');
+  background-image: url("image5.jpeg");
 }
 
 /* Hero Section Fonts */
 #home h1 {
-  font-family: 'Tangerine', cursive;
+  font-family: "Tangerine", cursive;
   font-size: 4rem;
   font-weight: 700;
   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
@@ -148,7 +148,7 @@ body {
 
 /* Countdown Timer */
 .countdown {
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   font-size: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin-top: 10px;
@@ -189,4 +189,30 @@ button {
 
 button:hover {
   background: #0056b3;
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .parallax-section {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  #home h1 {
+    font-size: 2.5rem;
+  }
+
+  .countdown {
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: 40px 10px;
+    width: 95%;
+  }
 }
