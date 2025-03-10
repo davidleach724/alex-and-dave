@@ -149,7 +149,7 @@ body {
 /* Countdown Timer */
 .countdown {
   font-family: 'Special Elite', cursive;
-  font-size: 2rem;
+  font-size: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin-top: 10px;
 }
