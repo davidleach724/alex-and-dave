@@ -1,5 +1,5 @@
 {
-  "homepage": "https://www.alexanddavy.party",
+  "homepage": "https://www.alexanddave.party",
   "name": "alex-and-dave",
   "version": "0.1.0",
   "private": true,
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.3.0"
   }
 }
