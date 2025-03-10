@@ -8,7 +8,6 @@ body {
   scroll-behavior: smooth;
   background-color: #111;
   color: white;
-  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -100,15 +99,8 @@ body {
   text-align: center;
   color: white;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .parallax-section {
-    background-attachment: scroll;
-    background-size: cover;
-  }
 }
 
 .parallax-section::before {
@@ -119,7 +111,6 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
-  z-index: 1;
 }
 
 .parallax-section > * {
