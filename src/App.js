@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Countdown from "react-countdown";
 import "./App.css";
@@ -14,16 +14,16 @@ const renderer = ({ days, hours, minutes, seconds }) => {
 const App = () => {
   const [showNav, setShowNav] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-  let lastScrollY = window.scrollY;
+  const lastScrollY = useRef(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
+      if (window.scrollY < lastScrollY.current) {
         setShowNav(true);
       } else {
         setShowNav(false);
       }
-      lastScrollY = window.scrollY;
+      lastScrollY.current = window.scrollY;
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -72,8 +72,8 @@ const App = () => {
         <section>
           <h2>Planning Your Weekend</h2>
           <ul>
-            <li><a href="https://maps.google.com" target="_blank">Restaurant 1</a></li>
-            <li><a href="https://maps.google.com" target="_blank">Hike 1</a></li>
+            <li><a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Restaurant 1</a></li>
+            <li><a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Hike 1</a></li>
           </ul>
         </section>
       </div>
