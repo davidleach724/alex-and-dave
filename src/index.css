@@ -5,9 +5,11 @@
 }
 
 body {
-  background-color: black; /* Optional: Keep black as a fallback */
-  overflow: hidden;
+  background-color: black;
+  overflow-x: hidden; /* Prevents horizontal scroll but allows vertical */
+  overflow-y: auto;   /* Enables vertical scrolling */
 }
+
 
 main {
   display: flex;
