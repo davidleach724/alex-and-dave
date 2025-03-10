@@ -29,3 +29,9 @@ main {
 .profile-pic:hover {
   transform: scale(1.1); /* Slight zoom effect on hover */
 }
+
+@media screen and (max-width: 768px) {
+  .parallax-section {
+    /* background-size: contain; Adjust background size to contain for mobile */
+  }
+}
