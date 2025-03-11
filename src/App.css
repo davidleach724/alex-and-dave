@@ -2,7 +2,7 @@
 
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Special Elite", cursive; /* Changed font-family */
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -71,6 +71,13 @@ body {
   font-size: 18px;
   padding: 10px 20px;
   display: block;
+  font-family: "Special Elite", cursive; /* Changed font-family */
+  transition: text-shadow 0.3s ease-in-out; /* Added transition for glow effect */
+}
+
+.navbar a:hover {
+  cursor: pointer; /* Change cursor on hover */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Stronger glow effect */
 }
 
 /* Mobile Navbar */
@@ -163,12 +170,21 @@ section {
   border-radius: 10px;
   width: 90%;
   max-width: 800px;
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px); /* Initial state for animation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation transition */
+}
+
+section.in-view {
+  opacity: 1; /* Final state for animation */
+  transform: translateY(0); /* Final state for animation */
 }
 
 h2 {
   margin-bottom: 20px;
   color: #f5f5f5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: "Special Elite", cursive; /* Changed font-family */
 }
 
 p {

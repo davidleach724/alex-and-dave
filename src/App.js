@@ -15,6 +15,7 @@ const App = () => {
   const [showNav, setShowNav] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const lastScrollY = useRef(window.scrollY);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,16 +24,49 @@ const App = () => {
       } else {
         setShowNav(false);
       }
+      if (menuOpen && window.scrollY > lastScrollY.current + 10) {
+        setMenuOpen(false);
+      }
       lastScrollY.current = window.scrollY;
     };
+
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          } else {
+            entry.target.classList.remove("in-view");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll("section").forEach((section) => {
+      observer.observe(section);
+    });
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      observer.disconnect();
+    };
+  }, [menuOpen]);
 
   return (
     <div>
       {/* Navbar */}
-      <nav className={`navbar ${showNav ? "slide-in" : "slide-out"}`}>
+      <nav className={`navbar ${showNav ? "slide-in" : "slide-out"}`} ref={menuRef}>
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
