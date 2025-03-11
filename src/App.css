@@ -192,15 +192,16 @@ button:hover {
 }
 
 /* Adjustments for mobile devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) { /* Change breakpoint from 768px to 600px */
   .navbar ul {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .parallax-section {
-    background-attachment: fixed;
-    background-size: cover;
+    background-attachment: scroll; /* Change from fixed to scroll */
+    background-size: cover; /* Ensure the background starts fully */
+    background-repeat: repeat-y; /* Repeat the background vertically */
   }
 
   #home h1 {
