@@ -7,7 +7,7 @@
 body {
   background-color: black;
   overflow-x: hidden; /* Prevents horizontal scroll but allows vertical */
-  overflow-y: auto;   /* Enables vertical scrolling */
+  overflow-y: auto; /* Enables vertical scrolling */
 }
 
 main {

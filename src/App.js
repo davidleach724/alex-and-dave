@@ -66,19 +66,71 @@ const App = () => {
   return (
     <div>
       {/* Navbar */}
-      <nav className={`navbar ${showNav ? "slide-in" : "slide-out"}`} ref={menuRef}>
+      <nav
+        className={`navbar ${showNav ? "slide-in" : "slide-out"}`}
+        ref={menuRef}
+      >
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
-        <ul className={`${menuOpen || window.innerWidth > 768 ? "show desktop-menu" : ""}`}>
-          <li><Link to="home" smooth={true} duration={500} onClick={() => {
-            setMenuOpen(false);
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}>Home</Link></li>
-          <li><Link to="event-details-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>Event Details</Link></li>
-          <li><Link to="weekend-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>Planning Your Weekend</Link></li>
-          <li><Link to="registry-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>Registry</Link></li>
-          <li><Link to="rsvp-section" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>RSVP</Link></li>
+        <ul
+          className={`${
+            menuOpen || window.innerWidth > 768 ? "show desktop-menu" : ""
+          }`}
+        >
+          <li>
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              onClick={() => {
+                setMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="event-details-section"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
+              Event Details
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="weekend-section"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
+              Planning Your Weekend
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="registry-section"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
+              Registry
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="rsvp-section"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
+            >
+              RSVP
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -87,7 +139,10 @@ const App = () => {
         <div className="hero-content">
           <h1>Alex Schwartz & Dave Leach</h1>
           <div className="countdown">
-            <Countdown date={new Date("2025-08-30T16:00:00-06:00")} renderer={renderer} />
+            <Countdown
+              date={new Date("2025-08-30T16:00:00-06:00")}
+              renderer={renderer}
+            />
           </div>
         </div>
       </div>
@@ -106,8 +161,24 @@ const App = () => {
         <section>
           <h2>Planning Your Weekend</h2>
           <ul>
-            <li><a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Restaurant 1</a></li>
-            <li><a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Hike 1</a></li>
+            <li>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Restaurant 1
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hike 1
+              </a>
+            </li>
           </ul>
         </section>
       </div>
@@ -124,7 +195,14 @@ const App = () => {
       <div className="parallax-section" id="rsvp-section">
         <section>
           <h2>RSVP</h2>
-          <p>Text us at: <button onClick={() => navigator.clipboard.writeText("123-456-7890")}>Copy Number</button></p>
+          <p>
+            Text us at:{" "}
+            <button
+              onClick={() => navigator.clipboard.writeText("123-456-7890")}
+            >
+              Copy Number
+            </button>
+          </p>
         </section>
       </div>
     </div>
