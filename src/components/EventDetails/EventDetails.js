@@ -5,8 +5,7 @@ import {
   FaTshirt,
   FaCar,
   FaUtensils,
-  FaMusic,
-  FaMapPin
+  FaMusic
 } from "react-icons/fa";
 
 const eventDetails = [
@@ -63,8 +62,8 @@ export default function EventDetails() {
 
   return (
     <section className="event-details-section">
-      <h2 className="event-details-header">Event Details</h2> {/* Add class for styling */}
-
+      <h2 className="event-details-header">Event Details</h2>{" "}
+      {/* Add class for styling */}
       {isMobile ? (
         <div className="event-details-mobile">
           {eventDetails.map((item, index) => (
@@ -74,6 +73,7 @@ export default function EventDetails() {
                 openIndex === index ? "open" : ""
               }`}
               onClick={() => toggleDetail(index)}
+              style={{ textAlign: "center" }} // Center content
             >
               <div className="event-details-header">
                 <div className="event-details-icon">{item.icon}</div>
