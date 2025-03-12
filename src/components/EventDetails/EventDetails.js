@@ -5,7 +5,7 @@ import {
   FaTshirt,
   FaCar,
   FaUtensils,
-  FaMusic
+  FaMusic,
 } from "react-icons/fa";
 
 const eventDetails = [
