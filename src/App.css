@@ -8,6 +8,7 @@ body {
   scroll-behavior: smooth;
   background-color: #111;
   color: white;
+  -webkit-font-smoothing: antialiased; /* Improve font rendering in Safari */
 }
 
 /* Navbar */
@@ -21,6 +22,7 @@ body {
   text-align: left;
   z-index: 1000;
   transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out; /* Add webkit prefix */
 }
 
 .navbar.slide-in {
@@ -46,6 +48,7 @@ body {
   visibility: hidden;
   transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 0;
+  -webkit-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add webkit prefix */
 }
 
 .navbar ul.show {
@@ -73,6 +76,7 @@ body {
   display: block;
   font-family: "Special Elite", cursive; /* Changed font-family */
   transition: text-shadow 0.3s ease-in-out; /* Added transition for glow effect */
+  -webkit-transition: text-shadow 0.3s ease-in-out; /* Add webkit prefix */
 }
 
 .navbar a:hover {
@@ -108,6 +112,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  -webkit-background-attachment: fixed; /* Add webkit prefix */
 }
 
 .parallax-section::before {
@@ -117,7 +122,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .parallax-section > * {
@@ -173,6 +178,7 @@ section {
   opacity: 0; /* Initial state for animation */
   transform: translateY(20px); /* Initial state for animation */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation transition */
+  -webkit-transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Add webkit prefix */
 }
 
 section.in-view {
@@ -207,6 +213,11 @@ button:hover {
   background: #0056b3;
 }
 
+/* Adjust Event Details Section Background Overlay */
+#event-details-section section {
+  background: rgba(255, 255, 255, 0);
+}
+
 /* Adjustments for mobile devices */
 @media screen and (max-width: 768px) {
   .navbar ul {
@@ -229,7 +240,97 @@ button:hover {
   }
 
   section {
-    padding: 40px 10px;
+    padding: 50px 15px; /* Increased padding for spacing */
     width: 95%;
   }
+}
+
+/* Event Details Section */
+.event-details-section {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.event-details-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.event-details-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Decreased gap */
+}
+
+.event-details-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.event-details-item.mobile {
+  background: none; /* Remove background on mobile */
+  width: calc(100% - 1rem); /* Adjust width to account for margin */
+}
+
+.event-details-item[open] .event-details-content {
+  max-height: 1000px; /* Arbitrary large value to ensure full height */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.event-details-item:not([open]) .event-details-content {
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.event-details-summary {
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+}
+
+.event-details-content {
+  color: #ffffff;
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.event-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .event-details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.event-details-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none; /* Remove background on desktop */
+}
+
+.event-details-icon {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.event-details-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Change text color to white */
+}
+
+.event-details-card-content {
+  color: #ffffff; /* Change text color to white */
+  text-align: center;
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Countdown from "react-countdown";
+import EventDetails from './components/EventDetails/EventDetails';
+import "intersection-observer"; // Correctly import the polyfill
 import "./App.css";
 
 const renderer = ({ days, hours, minutes, seconds }) => {
@@ -19,15 +21,17 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY.current) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
-      if (menuOpen && window.scrollY > lastScrollY.current + 10) {
-        setMenuOpen(false);
-      }
-      lastScrollY.current = window.scrollY;
+      requestAnimationFrame(() => {
+        if (window.scrollY < lastScrollY.current) {
+          setShowNav(true);
+        } else {
+          setShowNav(false);
+        }
+        if (menuOpen && window.scrollY > lastScrollY.current + 10) {
+          setMenuOpen(false);
+        }
+        lastScrollY.current = window.scrollY;
+      });
     };
 
     const handleClickOutside = (event) => {
@@ -150,9 +154,7 @@ const App = () => {
       {/* Event Details Section */}
       <div className="parallax-section" id="event-details-section">
         <section>
-          <h2>Event Details</h2>
-          <p>Lorem ipsum dolor sit amet...</p>
-          <p>Lorem ipsum dolor sit amet...</p>
+          <EventDetails />
         </section>
       </div>
 
