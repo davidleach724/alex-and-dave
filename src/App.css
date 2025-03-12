@@ -264,8 +264,10 @@ button:hover {
 
 .event-details-item {
   transition: all 0.3s ease-in-out;
-  padding: 1rem;
   cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: .5rem;
 }
 
 .event-details-item.mobile {
@@ -283,7 +285,11 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+  text-align: center; /* Center the header */
 }
 
 .event-details-icon {
@@ -300,6 +306,7 @@ button:hover {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+  margin-top: -.5rem;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   text-align: left;
 }
