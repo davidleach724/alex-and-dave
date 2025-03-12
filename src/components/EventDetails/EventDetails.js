@@ -21,7 +21,7 @@ const eventDetails = [
   },
   {
     icon: <FaTshirt size={24} />, 
-    title: "Dress Code",
+    title: "What to Wear",
     content:
       "Sundresses, slacks, button-downs, or anything stylish but relaxed! We want you to be comfortable and have fun.",
   },
