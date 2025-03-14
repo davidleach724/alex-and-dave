@@ -34,8 +34,14 @@ const eventDetails = [
   {
     icon: <FaUtensils size={24} />,
     title: "Food & Drinks",
-    content:
-      "Mukja Food Truck will be serving delicious bites with vegetarian and kids options. Open beer bar and N/A drinks provided by Ratio!",
+    content: (
+      <>
+        <a href="https://linktr.ee/mukjafoodtruck" target="_blank" rel="noopener noreferrer">
+          Mukja Food Truck
+        </a>{" "}
+        will be serving delicious bites with vegetarian & kids options available. Open beer bar and N/A drinks provided by Ratio!
+      </>
+    ),
   },
   {
     icon: <FaMusic size={24} />,

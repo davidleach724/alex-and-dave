@@ -355,6 +355,10 @@ button:hover {
   text-align: center;
 }
 
+.event-details-card-content a{
+  color: #ffffff;
+}
+
 /* Planning Your Weekend Section */
 .weekend-section {
   margin: 0 auto;
