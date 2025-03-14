@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Countdown from "react-countdown";
-import EventDetails from './components/EventDetails/EventDetails';
+import EventDetails from './components/EventDetails';
+import PlanningYourWeekend from './components/PlanningYourWeekend';
 import "intersection-observer"; // Correctly import the polyfill
 import "./App.css";
 
@@ -161,27 +162,7 @@ const App = () => {
       {/* Planning Your Weekend Section */}
       <div className="parallax-section" id="weekend-section">
         <section>
-          <h2>Planning Your Weekend</h2>
-          <ul>
-            <li>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Restaurant 1
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hike 1
-              </a>
-            </li>
-          </ul>
+          <PlanningYourWeekend />
         </section>
       </div>
 

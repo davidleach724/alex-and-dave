@@ -62,7 +62,7 @@ export default function EventDetails() {
 
   return (
     <section className="event-details-section">
-      <h2 className="event-details-header">Event Details</h2>{" "}
+      <h2 className="section-header">Event Details</h2>{" "}
       {/* Add class for styling */}
       {isMobile ? (
         <div className="event-details-mobile">
@@ -75,7 +75,7 @@ export default function EventDetails() {
               onClick={() => toggleDetail(index)}
               style={{ textAlign: "center" }} // Center content
             >
-              <div className="event-details-header">
+              <div className="section-header">
                 <div className="event-details-icon">{item.icon}</div>
                 <h3 className="event-details-summary">{item.title}</h3>
               </div>
