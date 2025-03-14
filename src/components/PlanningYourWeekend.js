@@ -233,7 +233,7 @@ export default function PlanningYourWeekend() {
             <div className="weekend-details-icon" style={{ marginBottom: 0 }}>
               <FaHotel size={24} />
             </div>
-            <h3 className="weekend-details-card-title" style={{marginTop: 0}}>Hotels & Lodging</h3>
+            <h3 className="weekend-details-card-title">Hotels & Lodging</h3>
           </div>
           <p>
             We don’t have a reserved room block, but we recommend checking out
@@ -241,7 +241,8 @@ export default function PlanningYourWeekend() {
             let us know! Some of the best areas to stay with plenty to do nearby
             are:
           </p>
-          <ul className="spaced-list">
+          <div style={{marginBottom: '2rem'}}></div>
+          <ul className="spaced-list-neighborhoods">
             <ul>
               Baker / South Broadway – A lively strip full of vintage shops,
               dive bars, and great restaurants.
