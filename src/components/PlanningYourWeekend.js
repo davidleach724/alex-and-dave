@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {
-  FaCoffee,
   FaCocktail,
   FaUtensils,
   FaTree,
@@ -37,7 +36,7 @@ export default function PlanningYourWeekend() {
       title: "Beverages",
       content: (
         <ul className="spaced-list">
-          <ul>
+          <li>
             <a
               href="https://queencitycollectivecoffee.com/"
               target="_blank"
@@ -45,8 +44,8 @@ export default function PlanningYourWeekend() {
             >
               Queen City Coffee
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://esphifi.co/"
               target="_blank"
@@ -54,8 +53,8 @@ export default function PlanningYourWeekend() {
             >
               ESP Cocktail Bar
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://www.odellbrewing.com/locations/fivepoints/"
               target="_blank"
@@ -63,8 +62,8 @@ export default function PlanningYourWeekend() {
             >
               Odell Brewing Five Points Brew House
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://www.trvebrewing.com/"
               target="_blank"
@@ -72,7 +71,7 @@ export default function PlanningYourWeekend() {
             >
               TRVE Brewing Company
             </a>
-          </ul>
+          </li>
         </ul>
       ),
     },
@@ -81,16 +80,16 @@ export default function PlanningYourWeekend() {
       title: "Food",
       content: (
         <ul className="spaced-list">
-          <ul>
+          <li>
             <a
               href="https://www.mchcco.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Music City Hot Chicken at TRVE
+              Music City Hot Chicken Denver at TRVE
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://eatleven.com/"
               target="_blank"
@@ -98,8 +97,8 @@ export default function PlanningYourWeekend() {
             >
               Leven Deli Co
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://www.stowawaydenver.com/"
               target="_blank"
@@ -107,8 +106,8 @@ export default function PlanningYourWeekend() {
             >
               Stowaway Kitchen (recommend reservation)
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://www.misterosodenver.com/"
               target="_blank"
@@ -116,7 +115,7 @@ export default function PlanningYourWeekend() {
             >
               Mister Oso
             </a>
-          </ul>
+          </li>
         </ul>
       ),
     },
@@ -125,7 +124,7 @@ export default function PlanningYourWeekend() {
       title: "Parks",
       content: (
         <ul className="spaced-list">
-          <ul>
+          <li>
             <a
               href="https://maps.app.goo.gl/LMFkP9cAn666fmjs5?g_st=com.google.maps.preview.copy"
               target="_blank"
@@ -133,8 +132,8 @@ export default function PlanningYourWeekend() {
             >
               Wash Park
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://maps.app.goo.gl/BvKktM1XfVfv8zoi8?g_st=com.google.maps.preview.copy"
               target="_blank"
@@ -142,8 +141,8 @@ export default function PlanningYourWeekend() {
             >
               City Park
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://maps.app.goo.gl/b7SDTzfs6d6SkJaQA?g_st=com.google.maps.preview.copy"
               target="_blank"
@@ -151,7 +150,7 @@ export default function PlanningYourWeekend() {
             >
               Sloans Lake
             </a>
-          </ul>
+          </li>
         </ul>
       ),
     },
@@ -160,7 +159,7 @@ export default function PlanningYourWeekend() {
       title: "Hikes",
       content: (
         <ul className="spaced-list">
-          <ul>
+          <li>
             <a
               href="https://www.alltrails.com/trail/us/colorado/red-rocks-trading-post-trail?sh=7tcbkh"
               target="_blank"
@@ -168,8 +167,8 @@ export default function PlanningYourWeekend() {
             >
               Red Rocks Trading Post Trail - easy
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://alltrails.com/parks/us/colorado/golden-gate-canyon-state-park"
               target="_blank"
@@ -177,8 +176,8 @@ export default function PlanningYourWeekend() {
             >
               Golden Gate Canyon State Park - easy
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://www.alltrails.com/trail/us/colorado/beaver-brook-chavez-trail-loop"
               target="_blank"
@@ -186,7 +185,7 @@ export default function PlanningYourWeekend() {
             >
               Bear Brook - medium spicy
             </a>
-          </ul>
+          </li>
         </ul>
       ),
     },
@@ -195,7 +194,7 @@ export default function PlanningYourWeekend() {
       title: "Museums",
       content: (
         <ul className="spaced-list">
-          <ul>
+          <li>
             <a
               href="https://www.denverartmuseum.org/en"
               target="_blank"
@@ -203,8 +202,8 @@ export default function PlanningYourWeekend() {
             >
               Denver Art Museum
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://clyffordstillmuseum.org/"
               target="_blank"
@@ -212,8 +211,8 @@ export default function PlanningYourWeekend() {
             >
               Clyfford Still Museum
             </a>
-          </ul>
-          <ul>
+          </li>
+          <li>
             <a
               href="https://www.dmns.org/"
               target="_blank"
@@ -221,7 +220,7 @@ export default function PlanningYourWeekend() {
             >
               Denver Museum of Nature and Science
             </a>
-          </ul>
+          </li>
         </ul>
       ),
     },
@@ -231,35 +230,34 @@ export default function PlanningYourWeekend() {
       content: expandedHotels ? (
         <>
           <div className="weekend-details-header">
-            <div className="weekend-details-icon" style={{ marginBottom: 0 }}>
+            <div className="weekend-details-icon">
               <FaHotel size={24} />
             </div>
             <h3 className="weekend-details-card-title">Hotels & Lodging</h3>
           </div>
-          <p>
+          <p style={{ marginBottom: "1rem" }}>
             We don’t have a reserved room block, but we recommend checking out
             Airbnb for the best options. If you need help finding a place, just
             let us know! Some of the best areas to stay with plenty to do nearby
             are:
           </p>
-          <div style={{ marginBottom: "2rem" }}></div>
           <ul className="spaced-list-neighborhoods">
-            <ul>
+            <li>
               Baker / South Broadway – A lively strip full of vintage shops,
               dive bars, and great restaurants.
-            </ul>
-            <ul>
+            </li>
+            <li>
               RiNo (River North) – Denver’s arts district, packed with
               breweries, murals, and trendy eateries.
-            </ul>
-            <ul>
+            </li>
+            <li>
               Capitol Hill – Historic charm meets a buzzing nightlife scene with
               cafes, music venues, and museums.
-            </ul>
-            <ul>
+            </li>
+            <li>
               The Highlands – A mix of modern and classic, offering scenic
               views, top-tier restaurants, and boutique shopping.
-            </ul>
+            </li>
           </ul>
         </>
       ) : (
@@ -288,21 +286,25 @@ export default function PlanningYourWeekend() {
                   openIndex === index ? "open" : ""
                 }`}
                 onClick={() => toggleDetail(index)}
-                style={{ textAlign: "center" }} // Center content
               >
-                <div className="section-header">
-                  <div className="weekend-details-icon">{item.icon}</div>
-                  <h3 className="weekend-details-summary">{item.title}</h3>
-                </div>
+                <div className="weekend-details-icon">{item.icon}</div>
+                <h3 className="weekend-details-summary">{item.title}</h3>
                 <div
                   className="weekend-details-content"
                   style={{ maxHeight: openIndex === index ? "200px" : "0" }}
                 >
-                  <p>{item.content}</p>
+                  {item.content}
                 </div>
               </div>
             ))
           )}
+        </div>
+      ) : expandedHotels ? (
+        <div
+          className="expanded-hotels show"
+          onClick={() => setExpandedHotels(false)}
+        >
+          {weekendActivities[5].content}
         </div>
       ) : (
         <div className="weekend-details-grid">

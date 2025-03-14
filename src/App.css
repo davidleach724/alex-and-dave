@@ -525,11 +525,15 @@ button:hover {
   cursor: pointer;;
 }
 
-.spaced-list ul {
+.spaced-list li {
   margin-bottom: 10px;
 }
 
-.spaced-list-neighborhoods ul {
-  margin-bottom: 15px;
+.spaced-list,
+.spaced-list-neighborhoods {
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
+
 
