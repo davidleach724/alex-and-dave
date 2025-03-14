@@ -369,8 +369,6 @@ button:hover {
 .weekend-details-item {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  /* padding-left: 1rem;
-  padding-right: 1rem; */
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -387,6 +385,7 @@ button:hover {
 
 .weekend-details-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.75rem;
   font-size: 2rem;
@@ -400,6 +399,7 @@ button:hover {
 .weekend-details-icon {
   color: #ffffff;
   font-size: 1.5rem;
+  margin-bottom: .5rem;;
 }
 
 .weekend-details-summary {
@@ -451,7 +451,6 @@ button:hover {
   flex-direction: column;
   align-items: center;
   background: none;
-  cursor: pointer;
   border-radius: 10px;
   transition: all 0.4s ease-in-out;
 }
@@ -517,4 +516,13 @@ button:hover {
   transform: scale(0.95);
   pointer-events: none;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.expand-collapse-text {
+  font-size: 1.125rem;
+  cursor: pointer;;
+}
+
+.spaced-list ul {
+  margin-bottom: 10px;
 }
