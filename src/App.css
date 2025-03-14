@@ -358,6 +358,7 @@ button:hover {
 .weekend-section {
   margin: 0 auto;
   text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 
 .weekend-details-mobile {
@@ -429,13 +430,13 @@ button:hover {
   color: #ddd; /* Slightly lighter white on hover */
 }
 
-
 .weekend-details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2.5rem;
   row-gap: 1rem;
   margin-top: 3.75rem;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -450,6 +451,9 @@ button:hover {
   flex-direction: column;
   align-items: center;
   background: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
 }
 
 .weekend-details-card-title {
@@ -473,4 +477,44 @@ button:hover {
 .weekend-details-content a:hover,
 .weekend-details-card-content a:hover {
   text-decoration: underline;
+}
+
+/* Hotels & Lodging Expanded */
+.expanded-hotels {
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.expanded-hotels.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.expanded-hotels p,
+.expanded-hotels ul {
+  text-align: left;
+}
+
+.expanded-hotels ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expanded-hotels li {
+  margin-bottom: 10px;
+}
+
+/* Hide other cards when expanded */
+.weekend-details-grid.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
