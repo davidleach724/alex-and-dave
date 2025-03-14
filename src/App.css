@@ -237,7 +237,7 @@ button:hover {
   }
 
   section {
-    padding: 50px 15px; /* Increased padding for spacing */
+    padding: 50px 0px; /* Increased padding for spacing */
     width: 95%;
     text-align: center; /* Center content */
   }
@@ -483,7 +483,6 @@ button:hover {
 
 /* Hotels & Lodging Expanded */
 .expanded-hotels {
-  padding: 2rem;
   border-radius: 10px;
   width: 100%;
   max-width: 800px;

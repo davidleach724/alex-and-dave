@@ -24,6 +24,7 @@ export default function PlanningYourWeekend() {
   const toggleDetail = (index) => {
     if (index === 5) {
       setExpandedHotels(!expandedHotels);
+      setOpenIndex(null);
     } else {
       setOpenIndex(openIndex === index ? null : index);
       setExpandedHotels(false);
@@ -86,7 +87,7 @@ export default function PlanningYourWeekend() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Music City Hot Chicken Denver at TRVE
+              Music City Hot Chicken at TRVE
             </a>
           </ul>
           <ul>
@@ -104,7 +105,7 @@ export default function PlanningYourWeekend() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Stowaway Kitchen (brunch, recommend reservation)
+              Stowaway Kitchen (recommend reservation)
             </a>
           </ul>
           <ul>
@@ -270,12 +271,38 @@ export default function PlanningYourWeekend() {
   return (
     <section className="weekend-section">
       <h2 className="section-header">Planning Your Weekend</h2>
-      {expandedHotels ? (
-        <div
-          className="expanded-hotels show"
-          onClick={() => setExpandedHotels(false)}
-        >
-          {weekendActivities[5].content}
+      {isMobile ? (
+        <div className="weekend-details-mobile">
+          {expandedHotels ? (
+            <div
+              className="expanded-hotels show"
+              onClick={() => setExpandedHotels(false)}
+            >
+              {weekendActivities[5].content}
+            </div>
+          ) : (
+            weekendActivities.map((item, index) => (
+              <div
+                key={index}
+                className={`weekend-details-item mobile ${
+                  openIndex === index ? "open" : ""
+                }`}
+                onClick={() => toggleDetail(index)}
+                style={{ textAlign: "center" }} // Center content
+              >
+                <div className="section-header">
+                  <div className="weekend-details-icon">{item.icon}</div>
+                  <h3 className="weekend-details-summary">{item.title}</h3>
+                </div>
+                <div
+                  className="weekend-details-content"
+                  style={{ maxHeight: openIndex === index ? "200px" : "0" }}
+                >
+                  <p>{item.content}</p>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       ) : (
         <div className="weekend-details-grid">
