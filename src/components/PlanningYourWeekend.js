@@ -161,20 +161,11 @@ export default function PlanningYourWeekend() {
         <ul className="spaced-list">
           <ul>
             <a
-              href="https://www.alltrails.com/trail/us/colorado/beaver-brook-chavez-trail-loop"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Bear Brook
-            </a>
-          </ul>
-          <ul>
-            <a
               href="https://www.alltrails.com/trail/us/colorado/red-rocks-trading-post-trail?sh=7tcbkh"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Red Rocks Trading Post Trail
+              Red Rocks Trading Post Trail - easy
             </a>
           </ul>
           <ul>
@@ -183,7 +174,16 @@ export default function PlanningYourWeekend() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Golden Gate Canyon State Park
+              Golden Gate Canyon State Park - easy
+            </a>
+          </ul>
+          <ul>
+            <a
+              href="https://www.alltrails.com/trail/us/colorado/beaver-brook-chavez-trail-loop"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bear Brook - medium spicy
             </a>
           </ul>
         </ul>
@@ -241,7 +241,7 @@ export default function PlanningYourWeekend() {
             let us know! Some of the best areas to stay with plenty to do nearby
             are:
           </p>
-          <div style={{marginBottom: '2rem'}}></div>
+          <div style={{ marginBottom: "2rem" }}></div>
           <ul className="spaced-list-neighborhoods">
             <ul>
               Baker / South Broadway – A lively strip full of vintage shops,
