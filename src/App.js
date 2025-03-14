@@ -215,7 +215,7 @@ const App = () => {
                 {name}: {phone} <FaCopy size={14} />
               </p>
               {copied === phone && (
-                <span style={{ color: "green", fontSize: "0.8rem" }}>
+                <span style={{ color: "white", fontSize: "0.8rem" }}>
                   Copied!
                 </span>
               )}
