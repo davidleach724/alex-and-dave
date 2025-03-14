@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Countdown from "react-countdown";
-import EventDetails from './components/EventDetails';
-import PlanningYourWeekend from './components/PlanningYourWeekend';
+import EventDetails from "./components/EventDetails";
+import PlanningYourWeekend from "./components/PlanningYourWeekend";
+import { FaCopy, FaSms } from "react-icons/fa";
 import "intersection-observer"; // Correctly import the polyfill
 import "./App.css";
 
@@ -14,9 +15,16 @@ const renderer = ({ days, hours, minutes, seconds }) => {
   );
 };
 
+const copyToClipboard = (text, setCopied) => {
+  navigator.clipboard.writeText(text);
+  setCopied(text);
+  setTimeout(() => setCopied(null), 2000); // Reset after 2 seconds
+};
+
 const App = () => {
   const [showNav, setShowNav] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [copied, setCopied] = useState(null);
   const lastScrollY = useRef(window.scrollY);
   const menuRef = useRef(null);
 
@@ -176,16 +184,50 @@ const App = () => {
 
       {/* RSVP Section */}
       <div className="parallax-section" id="rsvp-section">
-        <section>
+        <section style={{ textAlign: "center" }}>
           <h2>RSVP</h2>
-          <p>
-            Text us at:{" "}
-            <button
-              onClick={() => navigator.clipboard.writeText("123-456-7890")}
+          <p style={{ marginBottom: "1rem" }}>Text us at:</p>
+
+          {[
+            { name: "Alex", phone: "720.201.6376" },
+            { name: "Dave", phone: "817.637.1865" },
+          ].map(({ name, phone }) => (
+            <div
+              key={phone}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                marginBottom: "0.5rem",
+                justifyContent: "center",
+              }}
             >
-              Copy Number
-            </button>
-          </p>
+              <p
+                onClick={() => copyToClipboard(phone, setCopied)}
+                style={{
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                }}
+                aria-label={`Copy ${name}'s phone number`}
+              >
+                {name}: {phone} <FaCopy size={14} />
+              </p>
+              {copied === phone && (
+                <span style={{ color: "green", fontSize: "0.8rem" }}>
+                  Copied!
+                </span>
+              )}
+              <a
+                href={`sms:${phone}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+                aria-label={`Send text to ${name}`}
+              >
+                <FaSms size={16} />
+              </a>
+            </div>
+          ))}
         </section>
       </div>
     </div>
