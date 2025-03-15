@@ -23,7 +23,7 @@ const eventDetails = [
     icon: <FaTshirt size={24} />,
     title: "What to Wear",
     content:
-      "Sundresses, slacks, button-downs, or anything stylish but relaxed! We want you to be comfortable and have fun outdoors.",
+      "Sundresses, slacks, button-downs, or anything stylish but relaxed! We want you to be comfortable on a patio.",
   },
   {
     icon: <FaCar size={24} />,
