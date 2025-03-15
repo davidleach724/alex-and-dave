@@ -174,7 +174,7 @@ export default function PlanningYourWeekend() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Golden Gate Canyon State Park - easy
+              Golden Gate Canyon State Park - various options
             </a>
           </li>
           <li>
