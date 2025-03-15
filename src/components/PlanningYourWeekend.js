@@ -104,7 +104,7 @@ export default function PlanningYourWeekend() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Stowaway Kitchen (recommend reservation)
+              Stowaway Kitchen (reservations recommended)
             </a>
           </li>
           <li>
@@ -113,7 +113,7 @@ export default function PlanningYourWeekend() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Mister Oso
+              Mister Oso (reservations recommended)
             </a>
           </li>
         </ul>

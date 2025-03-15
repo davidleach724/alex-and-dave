@@ -17,13 +17,13 @@ const eventDetails = [
   {
     icon: <FaMapMarkerAlt size={24} />,
     title: "Location",
-    content: "Ratio Beerworks - Overland, 2030 S Cherokee St, Denver, CO",
+    content: "Ratio Beerworks Patio - Overland, 2030 S Cherokee St, Denver, CO",
   },
   {
     icon: <FaTshirt size={24} />,
     title: "What to Wear",
     content:
-      "Sundresses, slacks, button-downs, or anything stylish but relaxed! We want you to be comfortable and have fun.",
+      "Sundresses, slacks, button-downs, or anything stylish but relaxed! We want you to be comfortable and have fun outdoors.",
   },
   {
     icon: <FaCar size={24} />,
@@ -47,7 +47,7 @@ const eventDetails = [
     icon: <FaMusic size={24} />,
     title: "What to Expect",
     content:
-      "Live music, food truck, beer, and outdoor games. Check the weather in case you need a light jacket!",
+      "An outdoor celebration with music, a food truck, craft beer, and games! This reception follows a private ceremony—check the weather in case you need a light jacket!",
   },
 ];
 

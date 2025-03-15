@@ -152,6 +152,9 @@ const App = () => {
         <div className="hero-content">
           <h1>Alex Schwartz & Dave Leach</h1>
           <div className="countdown">
+            <div className="hero-description">
+              <p>Join us for an outdoor celebration with music, a food truck, craft beer, and games as we celebrate following our private ceremony!</p>
+            </div>
             <Countdown
               date={new Date("2025-08-30T16:00:00-06:00")}
               renderer={renderer}
@@ -174,13 +177,31 @@ const App = () => {
         </section>
       </div>
 
-      {/* Registry Section */}
-      <div className="parallax-section" id="registry-section">
-        <section>
-          <h2>Registry</h2>
-          <p>Coming soon...</p>
-        </section>
-      </div>
+{/* Registry Section */}
+<div className="parallax-section" id="registry-section">
+  <section className="registry-section">
+    <h2>Registry</h2>
+    <p className="registry-message">
+      Your love and support mean the world to us. If you'd like to give a gift, we kindly invite you to contribute to our future together. You can do so through Venmo, PayPal, Zelle, or CashApp. We appreciate your kindness and generosity as we begin this new chapter.
+    </p>
+    <div className="registry-links">
+      <a href="YOUR_VENMO_LINK" target="_blank" rel="noopener noreferrer" className="registry-button">
+        Venmo
+      </a>
+      <a href="YOUR_PAYPAL_LINK" target="_blank" rel="noopener noreferrer" className="registry-button">
+        PayPal
+      </a>
+      <a href="YOUR_ZELLE_LINK" target="_blank" rel="noopener noreferrer" className="registry-button">
+        Zelle
+      </a>
+      <a href="YOUR_CASHAPP_LINK" target="_blank" rel="noopener noreferrer" className="registry-button">
+        CashApp
+      </a>
+    </div>
+  </section>
+</div>
+
+
 
       {/* RSVP Section */}
       <div className="parallax-section" id="rsvp-section">
