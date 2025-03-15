@@ -193,7 +193,7 @@ const App = () => {
           </p>
           <div className="registry-links">
             <a
-              href="YOUR_VENMO_LINK"
+              href="https://venmo.com/u/davidleachmusic"
               target="_blank"
               rel="noopener noreferrer"
               className="registry-button"
@@ -201,23 +201,23 @@ const App = () => {
               Venmo
             </a>
             <a
-              href="YOUR_PAYPAL_LINK"
+              href="https://www.paypal.com/paypalme/davidleachmusic"
               target="_blank"
               rel="noopener noreferrer"
               className="registry-button"
             >
               PayPal
             </a>
-            <a
+            {/* <a
               href="YOUR_ZELLE_LINK"
               target="_blank"
               rel="noopener noreferrer"
               className="registry-button"
             >
               Zelle
-            </a>
+            </a> */}
             <a
-              href="YOUR_CASHAPP_LINK"
+              href="https://cash.app/$davidleachmusic"
               target="_blank"
               rel="noopener noreferrer"
               className="registry-button"
