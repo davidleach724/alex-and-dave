@@ -184,7 +184,7 @@ const App = () => {
       {/* Registry Section */}
       <div className="parallax-section" id="registry-section">
         <section className="registry-section">
-          <h2>Registry</h2>
+          <h2 className="section-header">Registry</h2>
           <p className="registry-message">
             Your love and support mean the world to us. If you'd like to give a
             gift, we kindly invite you to contribute to our future together. You
@@ -231,7 +231,7 @@ const App = () => {
       {/* RSVP Section */}
       <div className="parallax-section" id="rsvp-section">
         <section style={{ textAlign: "center" }}>
-          <h2 >RSVP</h2>
+          <h2 className="section-header">RSVP</h2>
           <p style={{ marginBottom: "1rem", fontSize: "1.25rem" }}>
             Text us your name and how you know Bill:
           </p>
