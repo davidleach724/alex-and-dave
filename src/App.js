@@ -208,14 +208,14 @@ const App = () => {
             >
               PayPal
             </a>
-            {/* <a
+            <a
               href="YOUR_ZELLE_LINK"
               target="_blank"
               rel="noopener noreferrer"
               className="registry-button"
             >
               Zelle
-            </a> */}
+            </a>
             <a
               href="https://cash.app/$davidleachmusic"
               target="_blank"

@@ -21,7 +21,7 @@ export default function PlanningYourWeekend() {
   }, []);
 
   const toggleDetail = (index) => {
-    if (index === 5) {
+    if (index === 0) {
       setExpandedHotels(!expandedHotels);
       setOpenIndex(null);
     } else {
@@ -31,6 +31,46 @@ export default function PlanningYourWeekend() {
   };
 
   const weekendActivities = [
+    {
+      icon: <FaHotel size={24} />,
+      title: "Hotels & Lodging",
+      content: expandedHotels ? (
+        <>
+          <div className="weekend-details-header">
+            <div className="weekend-details-icon">
+              <FaHotel size={24} />
+            </div>
+            <h3 className="weekend-details-card-title">Hotels & Lodging</h3>
+          </div>
+          <p style={{ marginBottom: "1rem" }}>
+            We don’t have a reserved room block, but we recommend checking out
+            Airbnb for the best options. If you need help finding a place, just
+            let us know! Some of the best areas to stay with plenty to do nearby
+            are:
+          </p>
+          <ul className="spaced-list-neighborhoods">
+            <li>
+              Baker / South Broadway – A lively strip full of vintage shops,
+              dive bars, and great restaurants.
+            </li>
+            <li>
+              RiNo (River North) – Denver’s arts district, packed with
+              breweries, murals, and trendy eateries.
+            </li>
+            <li>
+              Capitol Hill – Historic charm meets a buzzing nightlife scene with
+              cafes, music venues, and museums.
+            </li>
+            <li>
+              The Highlands – A mix of modern and classic, offering scenic
+              views, top-tier restaurants, and boutique shopping.
+            </li>
+          </ul>
+        </>
+      ) : (
+        <p className="expand-collapse-text">Click for more information</p>
+      ),
+    },
     {
       icon: <FaCocktail size={24} />,
       title: "Beverages",
@@ -224,46 +264,6 @@ export default function PlanningYourWeekend() {
         </ul>
       ),
     },
-    {
-      icon: <FaHotel size={24} />,
-      title: "Hotels & Lodging",
-      content: expandedHotels ? (
-        <>
-          <div className="weekend-details-header">
-            <div className="weekend-details-icon">
-              <FaHotel size={24} />
-            </div>
-            <h3 className="weekend-details-card-title">Hotels & Lodging</h3>
-          </div>
-          <p style={{ marginBottom: "1rem" }}>
-            We don’t have a reserved room block, but we recommend checking out
-            Airbnb for the best options. If you need help finding a place, just
-            let us know! Some of the best areas to stay with plenty to do nearby
-            are:
-          </p>
-          <ul className="spaced-list-neighborhoods">
-            <li>
-              Baker / South Broadway – A lively strip full of vintage shops,
-              dive bars, and great restaurants.
-            </li>
-            <li>
-              RiNo (River North) – Denver’s arts district, packed with
-              breweries, murals, and trendy eateries.
-            </li>
-            <li>
-              Capitol Hill – Historic charm meets a buzzing nightlife scene with
-              cafes, music venues, and museums.
-            </li>
-            <li>
-              The Highlands – A mix of modern and classic, offering scenic
-              views, top-tier restaurants, and boutique shopping.
-            </li>
-          </ul>
-        </>
-      ) : (
-        <p className="expand-collapse-text">Click for more information</p>
-      ),
-    },
   ];
 
   return (
@@ -276,7 +276,7 @@ export default function PlanningYourWeekend() {
               className="expanded-hotels show"
               onClick={() => setExpandedHotels(false)}
             >
-              {weekendActivities[5].content}
+              {weekendActivities[0].content}
             </div>
           ) : (
             weekendActivities.map((item, index) => (
@@ -304,7 +304,7 @@ export default function PlanningYourWeekend() {
           className="expanded-hotels show"
           onClick={() => setExpandedHotels(false)}
         >
-          {weekendActivities[5].content}
+          {weekendActivities[0].content}
         </div>
       ) : (
         <div className="weekend-details-grid">
