@@ -36,7 +36,7 @@ const eventDetails = [
     title: "Food & Drinks",
     content: (
       <>
-        <a href="https://linktr.ee/mukjafoodtruck" target="_blank" rel="noopener noreferrer">
+        <a href="https://linktr.ee/mukjafoodtruck" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
           Mukja Food Truck
         </a>{" "}
         will be serving delicious bites with vegetarian & kids options available. Open beer bar and N/A drinks provided by Ratio!
