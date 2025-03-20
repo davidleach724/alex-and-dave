@@ -188,7 +188,7 @@ const App = () => {
           <p className="registry-message">
             Your love and support mean the world to us. If you'd like to give a
             gift, we kindly invite you to contribute to our future together. You
-            can do so through Venmo, PayPal, Zelle, or CashApp. We appreciate
+            can do so through Venmo, PayPal, or CashApp. We appreciate
             your kindness and generosity as we begin this new chapter.
           </p>
           <div className="registry-links">
@@ -208,14 +208,14 @@ const App = () => {
             >
               PayPal
             </a>
-            <a
+            {/* <a
               href="YOUR_ZELLE_LINK"
               target="_blank"
               rel="noopener noreferrer"
               className="registry-button"
             >
               Zelle
-            </a>
+            </a> */}
             <a
               href="https://cash.app/$davidleachmusic"
               target="_blank"
