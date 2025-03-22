@@ -188,7 +188,7 @@ const App = () => {
           <p className="registry-message">
             Your love and support mean the world to us. If you'd like to give a
             gift, we kindly invite you to contribute to our future together. You
-            can do so through Venmo, PayPal, or CashApp. We appreciate
+            can do so through Venmo, PayPal, CashApp, or by check. We appreciate
             your kindness and generosity as we begin this new chapter.
           </p>
           <div className="registry-links">

@@ -589,11 +589,11 @@ button:hover {
   width: 100%;
 }
 
-/* Adjust to 2x2 layout on larger screens */
-@media (min-width: 600px) {
+
+@media (min-width: 768px) { /* Adjust for desktop screens */
   .registry-links {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 400px;
+    grid-template-columns: repeat(3, 1fr); /* Display links in a row */
+    max-width: 600px; /* Adjust width for alignment */
     margin: 0 auto;
   }
 }
@@ -610,6 +610,7 @@ button:hover {
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
   width: 100%;
+  max-width: 177px; /* Set max width */
   text-align: center;
 }
 
